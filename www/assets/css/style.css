@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 html{
-    font-size: 0.8rem;
+    font-size: 10px;
     font-family: 'Montserrat', sans-serif;
 }
 a{
@@ -37,12 +37,49 @@ a{
     opacity: 0.7;
     z-index: -1;
 }
+#welcome .welcome{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
 #welcome h1{
     display: block;
     width: fit-content;
     font-size: 4rem;
     position: relative;
-    color: white;
+    color: transparent;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1s;
+}
+#welcome h1:nth-child(1){
+    animation-delay: 1s;
+}
+#welcome h1:nth-child(2){
+    animation-delay: 2s;
+}
+#welcome h1:nth-child(3){
+    animation: text_reveal_fastfix 0.5s ease forwards;
+    animation-delay: 3s;
+}
+#welcome h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: crimson;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .3s;
+}
+#welcome h1:nth-child(1) span{
+    animation-delay: 0.5s;
+}
+#welcome h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+#welcome h1:nth-child(3) span{
+    animation-delay: 2.5s;
 }
 #welcome .btn_contact{
     display: inline-block;
@@ -53,7 +90,7 @@ a{
     border-radius: 30px;
     font-size: 2rem;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 300;
     letter-spacing: .1rem;
     margin-top: 36px;
     transition: .3s ease;
@@ -64,3 +101,29 @@ a{
     background-color: crimson;
 }
 /* Welcome End Section */
+
+
+
+/* Keyframes */
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+@keyframes text_reveal_fastfix{
+    100%{
+        color: crimson;
+        font-weight: 600;
+    }
+}
+/* end Keyframes */
