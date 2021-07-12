@@ -136,8 +136,12 @@ img{
 #services .section-title span{
     color: crimson;
 }
+#services .service-top {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 #services .service-top p{
-    padding: 40px;
+    padding: 50px;
     text-align: left;
 }
 #services .service-botton{
@@ -147,6 +151,8 @@ img{
     flex-wrap: wrap;
 }
 #services .service-item{
+    height: 300px;
+    max-width: 550px;
     flex-basis: 80%;
     display: flex;
     align-items: flex-start;
@@ -189,6 +195,53 @@ img{
     text-align: left;
 }
 /* End Services Section */
+
+/* Map Section */
+#map{
+    background-image: url(../img/background_002.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    z-index: 1;
+}
+#map::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: -1;
+}
+#map h1{
+    font-size: 4rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+    
+}
+#map h1 span{
+    color: crimson;
+}
+#map div{
+    justify-content: flex;
+    margin: 0 auto;
+    font-size: 2rem;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+#map iframe{
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* End Map Section */
 
 /* Keyframes */
 @keyframes text_reveal_box{
