@@ -30,7 +30,10 @@ img{
 	align-items: center;
 	justify-content: center;
 }
-
+nav.black ul{
+    background: rgba(0, 0, 0, 0.8);
+    transition: 1s;
+}
 /* header Section */
 #header .logo {
 	font-size: 2rem;
@@ -47,9 +50,10 @@ img{
 #header nav{
     height: 8vh;
     position: fixed;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.2);
     width: 100%;
     z-index: 10;
+    transition: 1s;
 }
 #header nav ul{
     color: white;
