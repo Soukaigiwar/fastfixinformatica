@@ -3,14 +3,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 html{
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
-}
-a{
-    text-decoration: none;
 }
 p{
     font-size: 2rem;
@@ -34,63 +32,47 @@ img{
 }
 
 /* header Section */
-#header .brand {
-	font-size: 4rem;
-	font-weight: 300;
-	color: black;
-	margin-bottom: 10px;
-	text-transform: uppercase;
-	letter-spacing: 0.2rem;
-	text-align: left;
-    float: left;
-}
-#header .brand span {
-	color: crimson;
-}
-#header .brand h1 {
+#header .logo {
 	font-size: 2rem;
-	text-transform: uppercase;
+	font-weight: 600;
+    margin: 20px 36px;
+	position: fixed;
+	letter-spacing: 0.3rem;
+    text-transform: uppercase;
 	color: white;
 }
-#header .brand h1 span {
-	color: crimson;
+#header .logo span{
+    color: crimson;
 }
-#header .nav-bar{
+#header nav{
+    height: 8vh;
     position: fixed;
-    display: flex;
-    z-index: 10;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: row;
+    background: rgba(0, 0, 0, 0.7);
     width: 100%;
-    min-height: 9vh;
-    background-color: rgb(45,45,45);
+    z-index: 10;
 }
-#header .nav{
-    display: flex;
-    justify-content: right;
-    list-style: none;
-    margin-right: 15%;
-}
-#header .menu-item{
-    font-size: 1.8rem;
+#header nav ul{
     color: white;
+    overflow: hidden;
+    padding: 10;
+    text-align: end;
 }
-#header li{
-    list-style-type: none;
+#header nav ul li{
+    display: inline-block;
+    padding: 20px;
 }
-#header .header {
-	min-height: 8vh;
-	transition: 0.3s ease background-color;
-}
-#header img{
-    width: 48px;
-}
-#header .whatsapp{
+#header ul li a{
     color: white;
-    font-size: 3rem;
-    font-weight: 300;
+    font-size: 2rem;
+}
+#header .menu img{
+    height: 24px;
+    width: 24px;
+}
+#header .menu span{
+    font-size: 2rem;
+    color: crimson;
+    font-weight: 600;
 }
 /* end header Section */
 
@@ -163,7 +145,7 @@ img{
     padding: 10px 30px;
     color:white;
     background-color: transparent;
-    border: 2px solid crimson;
+    border: 2px solid white;
     border-radius: 30px;
     font-size: 2rem;
     text-transform: uppercase;
@@ -176,6 +158,8 @@ img{
 #welcome .btn_contact:hover{
     color: white;
     background-color: crimson;
+    border:2px solid crimson;
+
 }
 /* End Welcome Section */
 
@@ -223,7 +207,6 @@ img{
     flex-direction: column;
     padding: 30px;
     border-radius: 10px;
-    /* background-image: url(../img/background_services.jpg); */
     background-size:cover;
     margin: 10px 5%;
     position: relative;
@@ -267,6 +250,13 @@ img{
     position: relative;
     z-index: 1;
 }
+#map .container{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
 #map::after{
     content: '';
     position: absolute;
@@ -282,7 +272,6 @@ img{
     font-size: 4rem;
     font-weight: 300;
     color: white;
-    margin-top: 100px;
     margin-bottom: 50px;
     text-transform: uppercase;
     letter-spacing: .2rem;
