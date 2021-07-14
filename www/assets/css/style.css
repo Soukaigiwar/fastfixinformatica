@@ -35,43 +35,55 @@ nav.black ul{
     transition: 1s;
 }
 /* header Section */
+#header *{
+    z-index: 10;
+}
+#header .top_bar{
+    position:fixed;
+    height: 3vh;
+    display: flex;
+    margin: .5rem;
+}
+#header .contato{
+    font-size: 1.4rem;
+    position: fixed;
+    right: 1rem;
+    top: .5rem;
+}
+#header a{
+    color: white;
+}
 #header .logo {
 	font-size: 2rem;
 	font-weight: 600;
-    margin: 20px 36px;
 	position: fixed;
-	letter-spacing: 0.3rem;
     text-transform: uppercase;
 	color: white;
+    top: 3rem;
 }
 #header .logo span{
     color: crimson;
 }
 #header nav{
-    height: 8vh;
+    height: 5vh;
     position: fixed;
-    background: rgba(0, 0, 0, 0.2);
     width: 100%;
     z-index: 10;
-    transition: 1s;
+    top: 3vh;
+    box-sizing: border-box;
 }
 #header nav ul{
     color: white;
     overflow: hidden;
-    padding: 10;
     text-align: end;
 }
 #header nav ul li{
     display: inline-block;
-    padding: 20px;
+    padding: 1rem;
 }
 #header ul li a{
     color: white;
-    font-size: 2rem;
-}
-#header .menu img{
-    height: 24px;
-    width: 24px;
+    font-size: 1.5rem;
 }
 #header .menu span{
     font-size: 2rem;
