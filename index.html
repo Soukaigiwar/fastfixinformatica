@@ -10,13 +10,27 @@
 <body>
     <!-- header section -->
     <section id="header">
-        <div class="header container">
-            <div class="nav-bar">
-                <div class="brand">
-                    <a href="#welcome"><h1><span>F</span>ast <span>F</span>ix <span>I</span>nformática <span class="whats"> <img src="https://img.icons8.com/color/50/000000/whatsapp--v1.png"/> 11-96927-5702</span>das 10h as 19h</h1></a>
+        <header>
+            <div class="top_bar">
+                <div class="contato">
+                    <img src="https://img.icons8.com/color/32/000000/whatsapp--v6.png"/>
+                    <a href="#whatsapp">11-96927-5702</a>
                 </div>
             </div>
-        </div>
+            <nav>
+                <div class="logo">
+                    <h1><span>f</span>ast <span>f</span>ix <span>i</span>nformática</h1>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li class="menu-item"><a href="#welcome">Início</a></li>
+                        <li class="menu-item"><a href="#services">Serviços</a></li>
+                        <li class="menu-item"><a href="#map">Localização</a></li>
+                        <li class="menu-item"><a href="#about">Sobre</a></li>
+                      </ul>
+                </div>
+            </nav>
+        </header>
     </section>
     <!-- end header section -->
     
@@ -116,6 +130,20 @@
     <footer>
         <p>desenvolvido por Sergio Mello - <a href="https://icons8.com/icon/tGFliXQWsAP5/computer-support">icons by Icons8</a></p>   
     </footer>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script>
+        $(window).scroll(function(){
+            if($(window).scrollTop()){
+                $("nav").addClass("black");
+            }
+            else{
+                $("nav").removeClass("black");
+            }
+        });
+    </script>
     <script src="./assets/js/app.js"></script>
 </body>
 </html>
