@@ -11,24 +11,22 @@
     <!-- header section -->
     <section id="header">
         <header>
-            <div class="top_bar">
-                <div class="contato">
-                    <img src="https://img.icons8.com/color/32/000000/whatsapp--v6.png"/>
-                    <a href="#whatsapp">11-96927-5702</a>
-                </div>
+            <div class="contato">
+                <img src="https://img.icons8.com/color/32/000000/whatsapp--v6.png"/>
+                <div class="whatsapp"><a href="https://api.whatsapp.com/send?phone=5511969275702&text=Ol%C3%A1!%20estou%20entrando%20em%20contato%20pelo%20site%20da%20Fast%20Fix%20Inform%C3%A1tica
+                    ">11-96927-5702</a></div>
             </div>
             <nav>
-                <div class="logo">
-                    <h1><span>f</span>ast <span>f</span>ix <span>i</span>nformática</h1>
+                <div>
+                    <img class="logo" src="./assets/img/fastfix_transp_128px.png">
+                    <h1 id="ffi">Fast Fix Informática</h1>
                 </div>
-                <div class="menu">
-                    <ul>
-                        <li class="menu-item"><a href="#welcome">Início</a></li>
-                        <li class="menu-item"><a href="#services">Serviços</a></li>
-                        <li class="menu-item"><a href="#map">Localização</a></li>
-                        <li class="menu-item"><a href="#about">Sobre</a></li>
-                      </ul>
-                </div>
+                <ul>
+                    <li class="menu-item"><a href="#welcome">Início</a></li>
+                    <li class="menu-item"><a href="#services">Serviços</a></li>
+                    <li class="menu-item"><a href="#map">Localização</a></li>
+                    <li class="menu-item"><a href="#about">Sobre</a></li>
+                </ul>
             </nav>
         </header>
     </section>
@@ -130,20 +128,18 @@
     <footer>
         <p>desenvolvido por Sergio Mello - <a href="https://icons8.com/icon/tGFliXQWsAP5/computer-support">icons by Icons8</a></p>   
     </footer>
-    <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(window).scroll(function(){
             if($(window).scrollTop()){
                 $("nav").addClass("black");
+                document.getElementById("ffi").innerHTML = "FFI";
             }
             else{
                 $("nav").removeClass("black");
+                document.getElementById("ffi").innerHTML = "Fast Fix Informática";
             }
         });
     </script>
-    <script src="./assets/js/app.js"></script>
 </body>
 </html>

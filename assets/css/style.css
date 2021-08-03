@@ -18,11 +18,11 @@ p{
     letter-spacing: 0.05rem;
     color: black;
 }
-img{
+/* img{
     height: 100%;
     width: 100%;
     object-fit: cover;
-}
+} */
 .container {
 	min-height: 100vh;
 	width: 100%;
@@ -30,72 +30,99 @@ img{
 	align-items: center;
 	justify-content: center;
 }
-nav.black ul{
-    background: rgba(0, 0, 0, 0.8);
+/* ############################################################################### */
+/* header Section */
+#header nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: .5s;
+    z-index: 10;
+}
+#header nav.black{
+    background:rgba(0, 0, 0, 0.8);
+    height: 60px;
+    padding: 5px 10px;
+}
+#header nav .logo{
+    float: left;
+    display: flex;
+}
+#header nav div img{
+    height: 100px;
     transition: 1s;
 }
-/* header Section */
-#header *{
-    z-index: 10;
+#header nav div h1{
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
 }
-#header .top_bar{
-    position:fixed;
-    height: 4vh;
-    display: flex;
-    margin: .5rem;
+#header nav.black div span{
+    font-size: 1.5em;
+    font-weight: bold;
+    color:white;
 }
-#header img{
-    width: 32px;
-}
-#header .contato{
-    font-size: 2rem;
-    position: fixed;
-    right: 1rem;
-    top: .8rem;
-}
-#header a{
-    color: green;
-    font-weight: 600;
-}
-#header .logo {
-	font-size: 2rem;
-	font-weight: 600;
-	position: fixed;
-    text-transform: uppercase;
-	color: white;
-    top: 3rem;
-}
-#header .logo span{
-    color: crimson;
-}
-#header nav{
-    height: 5vh;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    top: 5vh;
-    box-sizing: border-box;
+#header nav.black img{
+    height: 50px;
 }
 #header nav ul{
-    color: white;
-    overflow: hidden;
-    text-align: end;
+    float:  right;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 #header nav ul li{
-    display: inline-block;
-    padding: 1rem;
+    list-style: none;
 }
-#header ul li a{
+#header nav ul li a{
+    line-height: 10px;
     color: white;
-    font-size: 1.5rem;
+    padding: 2px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: .3s;
 }
-#header .menu span{
+#header nav.black ul li a{
+    line-height: 0px;
+}
+#header nav ul li a.active, a:hover{
+    color: white;
+    background: crimson;
+}
+#header .contato{
+    position: fixed;
+    z-index: 11;
+    bottom: 0;
+    right: 0;
+    line-height: 50px;
     font-size: 2rem;
-    color: crimson;
     font-weight: 600;
+    color: white;
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    background:rgba(0, 0, 0, 0.8)  ;
+    box-sizing: border-box;
+}   
+#header .contato img{
+    width: 48px;
+}
+#header .contato div a{
+
+    color:white;
+}
+#header .contato div a:hover{
+
+    color:green;
+    background: none;
 }
 /* end header Section */
-
+/* ############################################################################### */
 /* Welcome Section */
 #welcome{
     background-image: url(../img/background_001.jpg);
@@ -124,12 +151,13 @@ nav.black ul{
 #welcome h1{
     display: block;
     width: fit-content;
-    font-size: 5rem;
-    font-weight: 300;
+    font-size: 7rem;
+    font-weight: 600;
     position: relative;
     color: transparent;
     animation: text_reveal 0.5s ease forwards;
     animation-delay: 1s;
+    transition: 1s ease;
 }
 #welcome h1:nth-child(1){
     animation-delay: 1s;
@@ -169,7 +197,7 @@ nav.black ul{
     border-radius: 30px;
     font-size: 2rem;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 600;
     letter-spacing: .1rem;
     margin-top: 36px;
     transition: .3s ease;
@@ -182,7 +210,7 @@ nav.black ul{
 
 }
 /* End Welcome Section */
-
+/* ############################################################################### */
 /* Services Section */
 #services .service{
     flex-direction: column;
@@ -261,7 +289,7 @@ nav.black ul{
     text-align: left;
 }
 /* End Services Section */
-
+/* ############################################################################### */
 /* Map Section */
 #map{
     background-image: url(../img/background_002.jpg);
@@ -314,7 +342,7 @@ nav.black ul{
     margin-right: 10px;
 }
 /* End Map Section */
-
+/* ############################################################################### */
 /* About Section */
 #about{
     background-image: url(../img/background_003.jpg);
@@ -373,14 +401,14 @@ nav.black ul{
     margin: 20px;
 }
 /* End About Section */
-
+/* ############################################################################### */
 /* footer */
 footer p{
     padding: 10px;
     font-size: 1.4rem;
 }
 /* end footer */
-
+/* ############################################################################### */
 /* Keyframes */
 @keyframes hamburger_puls {
 	0% {
@@ -414,65 +442,21 @@ footer p{
     }
 }
 /* end Keyframes */
-
+/* ############################################################################### */
 /* Media Query For Tablet */
-@media only screen and (min-width: 768px) {
-	.btn_contact {
-		font-size: 2.5rem;
-		padding: 20px 60px;
-	}
-	h1.section-title {
-		font-size: 6rem;
-	}
-
-	/* welcome */
-	#welcome h1 {
-		font-size: 7rem;
-	}
-	/* End Hero */
-
-	/* Services Section */
-	#services .service-bottom .service-item {
-		flex-basis: 45%;
-		margin: 2.5%;
-	}
-	/* End Services Section */
-
-	/* About */
-	#about .about {
-		flex-direction: row;
-	}
-    /* End About */
+@media only screen and (max-width: 768px) {
+    #header header nav div img{
+        width: 50px;
+        height: 50px;
+    }
+    #welcome h1{
+        font-size: 2rem;
+    }
 }
 /* End Media Query For Tablet */
-
+/* ############################################################################### */
 /* Media Query For Desktop */
 @media only screen and (min-width: 1200px) {
-	/* header */
-	#header .hamburger {
-		display: none;
-	}
-	#header .nav-list ul {
-		position: initial;
-		display: block;
-		height: auto;
-		width: fit-content;
-		background-color: transparent;
-	}
-	#header .nav-list ul li {
-		display: inline-block;
-	}
-	#header .nav-list ul li a {
-		font-size: 1.8rem;
-	}
-	#header .nav-list ul a:after {
-		display: none;
-	}
-	/* End header */
-
-	#services .service-bottom .service-item {
-		flex-basis: 22%;
-		margin: 1.5%;
-	}
+    
 }
 /* End  Media Query For Desktop */
